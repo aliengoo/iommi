@@ -22,6 +22,9 @@ input {
     &.money {
       direction: ltr;
     }
+    &.highlight {
+      background-color: #fdffc3;
+    }
   }
 }
 

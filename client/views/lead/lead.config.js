@@ -20,7 +20,7 @@
       }
     }).state('new-lead', {
       url: '/lead',
-      templateUrl: 'lead/lead.new.html',
+      templateUrl: 'lead/lead.html',
       controller: 'Lead as vm',
       resolve: {
         lead : ['$q', function($q){

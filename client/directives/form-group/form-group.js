@@ -23,7 +23,10 @@
       var labelElement = '';
 
       if ($a.label) {
-        labelElement = '<label class="control-label">' + $a.label + '</label>';
+        labelElement =
+          '<label class="control-label">' + $a.label +
+            ' <i ng-show="ngModel.$invalid && ngModel.$dirty" class="fa fa-exclamation"></i>' +
+          '</label>';
       }
 
       return _.template(t)({

@@ -49,7 +49,7 @@ var vendorSrcMaps = [
 var cssFiles = [
 'bower/bootstrap/dist/css/bootstrap.css',
   'bower/angular-loading-bar/build/loading-bar.min.css',
-  'bower/fontawesome/css/font-awesome.min.css',
+  'bower/font-awesome/css/font-awesome.min.css',
   'bower/sweetalert/lib/sweet-alert.css',
   'bower/toastr/toastr.min.css',
   'bower/animate.css/animate.min.css',

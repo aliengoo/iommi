@@ -1,0 +1,8 @@
+<div class="form-group" ng-class="{'has-error' : ngModel.$invalid && ngModel.$dirty, 'has-success' : ngModel.$valid && ngModel.$modelValue}">
+  <%= labelElement %>
+  <div ng-transclude>
+  </div>
+  <div ng-messages="ngModel.$error">
+    <span class="help-block" ng-message="required">Required</span>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+.help-block {
+  font-size : 10px;
+}
+
+input {
+  &.form-control {
+    &.date {
+      width : 100px;
+    }
+
+    &.small {
+      width : 120px;
+    }
+
+    &.medium {
+      width : 200px;
+    }
+
+    &.large {
+      width : 300px;
+    }
+    &.money {
+      direction: ltr;
+    }
+  }
+}
+
+div {
+  &[ui-view] {
+    &.ng-enter {
+      animation: fadeIn 0.5s;
+      -webkit-animation: fadeIn 0.5s;
+    }
+  }
+}
+
+$enterAnimation : fadeInDown;
+$existAnimation : fadeOutUp;
+$animateTime : 0.3s;
+
+span {
+  &.help-block {
+    font-size: 10px;
+
+    &.ng-enter {
+      animation: $enterAnimation $animateTime;
+      -webkit-animation: $enterAnimation $animateTime;
+    }
+    &.ng-enter {
+      &.ng-enter-active {
+        animation: $enterAnimation $animateTime;
+        -webkit-animation: $enterAnimation $animateTime;
+      }
+    }
+
+    &.ng-leave {
+      animation: $existAnimation $animateTime;
+      -webkit-animation: $existAnimation $animateTime;
+    }
+    &.ng-leave {
+      &.ng-leave-active {
+        animation: $existAnimation $animateTime;
+        -webkit-animation: $existAnimation $animateTime;
+      }
+    }
+  }
+}

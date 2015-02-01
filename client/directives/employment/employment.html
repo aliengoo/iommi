@@ -1,23 +1,4 @@
 <section>
-  <form-group label="First name">
-    <input type="text" ng-model="person.firstName" required name="firstName" maxlength="80" class="large"/>
-  </form-group>
-
-  <form-group label="Middle names">
-    <input type="text" ng-model="person.middleNames" name="middleNames" maxlength="80" class="large"/>
-  </form-group>
-
-  <form-group label="Last name">
-    <input type="text" ng-model="person.lastName" required name="lastName" maxlength="80" class="large"/>
-  </form-group>
-
-  <form-group label="Date of birth">
-    <input type="text" ui-mask="99/99/9999" validate-date="validateDateOptions" ng-model="person.birthDate" name="birthDate" class="date"/>
-    <div ng-messages="form.birthDate.$error">
-      <span class="help-block" ng-message="range">The birth date is not valid</span>
-    </div>
-  </form-group>
-
   <form-group label="Salary">
     <input
       type="text"
@@ -28,7 +9,7 @@
       restrict-keys="{'keys' : [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58]}"
       name="salary"
       validate-money="{'min' : 0, 'max' : 1000000}"/>
-    <div ng-messages="form.salary.$error">
+    <div ng-messages="form.salary.$error" ng-if="form.salary.$dirty">
       <span class="help-block" ng-message="range">Enter a value between £0 and £1,000,000</span>
     </div>
   </form-group>
@@ -44,9 +25,23 @@
       name="partnersSalary"
       validate-money="{'min' : 0, 'max' : 1000000}"/>
 
-    <div ng-messages="form.partnersSalary.$error">
+    <div ng-messages="form.partnersSalary.$error" ng-if="form.partnersSalary.$dirty">
       <span class="help-block" ng-message="range">Enter a value between £0 and £1,000,000</span>
     </div>
   </form-group>
 
+  <form-group label="Service to date">
+    <input
+      type="text"
+      ng-model="person.serviceToDate",
+      class="small"
+      selection-on-focus
+      ui-mask="99/9999"
+      restrict-keys="{'keys' : [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58]}"
+      name="serviceToDate"
+      />
+    <div ng-messages="form.partnersSalary.$error" ng-if="form.partnersSalary.$dirty">
+      <span class="help-block" ng-message="range">Enter a value between £0 and £1,000,000</span>
+    </div>
+  </form-group>
 </section>
